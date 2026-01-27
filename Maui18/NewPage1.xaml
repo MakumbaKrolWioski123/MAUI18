@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui18.NewPage1"
+             Title="NewPage1">
+    <ScrollView>
+        <VerticalStackLayout
+          Padding="30,0"
+          Spacing="25"
+          WidthRequest="600"
+          HorizontalOptions="Center">
+            <Label
+              Text="Skontaktuj się z nami"
+              Style="{StaticResource Headline}"
+              SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry
+              x:Name="Imie"
+              Placeholder="Wpisz Imię:"/>
+            <Entry
+              x:Name="Nazwisko"
+              Placeholder="Wpisz Nazwisko:"/>
+            <Entry
+              x:Name="Email"
+              Placeholder="Wpisz Email:"
+              Keyboard="Email"/>
+            <Editor
+              x:Name="Tresc"
+              HeightRequest="150"
+              Placeholder="Wpisz treść wiadomosci"/>
+            <Button
+              x:Name="WyslijButton"
+              Text="Wyślij"
+              Clicked="OnWyslijClicked"
+              />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

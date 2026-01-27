@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui18.NewPage2"
+             Title="NewPage2">
+    <ScrollView>
+    <VerticalStackLayout Spacing="10" WidthRequest="600">
+    <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Spacing="15">
+        <Label 
+            Text="Włacz powiadomienia push"
+            FontSize="Medium"/>
+        <Switch x:Name="Push"/>
+    </HorizontalStackLayout>
+    <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Spacing="15">
+        <Label 
+        Text="Powiadomienia E-mail"
+        FontSize="Medium"/>
+        <Switch x:Name="Email"/>
+    </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Spacing="15">
+            <Label 
+        Text="Powiadomienia SMS"
+        FontSize="Medium"/>
+            <Switch x:Name="SMS"/>
+        </HorizontalStackLayout>
+        <Label Text="Wyglad:"
+                   FontSize="Header"/>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Spacing="15">
+           <Label 
+        Text="Tryb ciemny"
+        FontSize="Medium"/>
+           <Switch x:Name="Tryb"/>
+        </HorizontalStackLayout>
+        <Slider x:Name="Czcionka" HorizontalOptions="Center" Minimum="12" Maximum="24" Value="16" WidthRequest="500"/>
+        <Label BindingContext="{x:Reference Czcionka}"
+               Text="{Binding Value, StringFormat='Rozmiar czcionki to {0:F0}'}"
+               HorizontalOptions="Center"/>
+        <Label Text="Prywatnosc:"
+           FontSize="Header"/>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Spacing="15">
+            <CheckBox x:Name="Dane"/>
+            <Label 
+             Text="Udostępnij dane analityczne"
+             FontSize="Medium"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Spacing="15">
+            <CheckBox x:Name="Reklamy"/>
+            <Label 
+            Text="Personalizowane reklamy"
+            FontSize="Medium"/>
+        </HorizontalStackLayout>
+        <Label Text="Stopka:"
+            FontSize="Header"/>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Spacing="15">
+                <Button
+                    Text="Zapisz ustawienia"
+                    Clicked="Podsumowanie"/>
+                <Button Text="Przywrosc domyślne"
+                        BackgroundColor="Gray"/>
+        </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
