@@ -13,12 +13,13 @@
             x:Name="Kwota"
             Keyboard="Numeric"
             Placeholder="Wpisz kwote rachunku"
-            PlaceholderColor="LightGray"/>
+            PlaceholderColor="LightGray"
+            Text="{Binding Kwota, Mode=TwoWay}"/>
         <Slider
             x:Name="Napiwek"
             Minimum="0"
             Maximum="30"
-            Value="15"/>
+            Value="{Binding Napiwek, Mode=TwoWay}"/>
         <Label
             x:Name="WartoscNapiwkuLabel"
             BindingContext="{x:Reference Napiwek}"
@@ -40,7 +41,7 @@
             IsVisible="False"/>
         <Label
             x:Name="NapiwekLabel"
-            Text=""
+            Text="{Binding Rachunek, Mode=OneWay}"
             HorizontalOptions="Center"
             FontSize="Medium"
             />
