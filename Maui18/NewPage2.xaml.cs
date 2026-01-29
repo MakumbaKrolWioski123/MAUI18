@@ -18,10 +18,16 @@ public partial class NewPage2 : ContentPage
 
 		var dane = Dane.IsChecked;
 		var reklamy = Reklamy.IsChecked;
-
+		
 		await DisplayAlert("Podsumowanie Ustawieñ:", 
-		"Powiadomienia push: "+push+" Powiadomienia email: "+email,
-		"OK");
+		"Powiadomienia push: "+push+
+		" Powiadomienia email: "+email+
+		" Powiadomienia SMS: "+sms+
+		" Tryb ciemny: "+tryb+
+		" Rozmiar czcionki: "+czcionka+
+		" Dane analityczne: "+dane+
+		" Personalizowane reklamy: "+reklamy
+		,"OK");
 		
 	}
-}
+} 
