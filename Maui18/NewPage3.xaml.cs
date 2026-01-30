@@ -38,6 +38,9 @@ public partial class NewPage3 : ContentPage
         private double _kwota { get; set; }
         private double _napiwek { get; set; }
         private double _rachunek { get; }
+        private double _liczbaosob { get; set; }
+        private double _suma {  get; }
+        private double _naosobe { get; }
 
         public double Kwota
         {
@@ -60,9 +63,23 @@ public partial class NewPage3 : ContentPage
             {
                 if (_napiwek != value)
                 {
-                    _napiwek = Math.Round(value / 100,2);
+                    _napiwek = Math.Round(value,2);
                     OnPropertyChanged();
                     OnPropertyChanged(nameof(Rachunek));
+                }
+            }
+        }
+
+        public double Liczbaosob
+        {
+            get => _liczbaosob;
+            set
+            {
+                if (_liczbaosob != value)
+                {
+                    _liczbaosob = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(NaOsobe));
                 }
             }
         }
@@ -72,9 +89,28 @@ public partial class NewPage3 : ContentPage
             get
             {
                 if (_kwota <= 0) return 0;
-                return Math.Round(_kwota*_napiwek,2);
+                return Math.Round(_kwota*_napiwek/100,2);
             }
         }
+
+        public double Suma
+        { 
+            get
+            {
+                if (_kwota <= 0) return 0;
+                return _kwota + Rachunek;
+            }
+        }
+
+        public double NaOsobe
+        {
+            get
+            {
+                if (_kwota <= 0) return 0;
+                return Math.Round(Suma/_liczbaosob,2);
+            }
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
