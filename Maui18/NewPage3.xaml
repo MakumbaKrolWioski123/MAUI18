@@ -56,5 +56,18 @@
             IsVisible="False"
             HorizontalOptions="Center"
             FontSize="Medium"/>
+        <Label Text="Procent napiwku: "
+               HorizontalOptions="Center"/>
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <Button x:Name="Button10"
+                    Text="10%"
+                    Clicked="Przycisk10"/>
+            <Button x:Name="Button15"
+                    Text="15%"
+                    Clicked="Przycisk15"/>
+            <Button x:Name="Button20"
+                    Text="20%"
+                    Clicked="Przycisk20"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

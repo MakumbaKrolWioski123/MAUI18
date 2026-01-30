@@ -33,7 +33,22 @@ public partial class NewPage3 : ContentPage
 		}
 	}
 
-	public class RachunekCalculatorVeiwModel : INotifyPropertyChanged
+    private async void Przycisk10(object sender, EventArgs e)
+    {
+        Napiwek.Value = 10;
+    }
+
+    private async void Przycisk15(object sender, EventArgs e)
+    {
+        Napiwek.Value = 15;
+    }
+
+    private async void Przycisk20(object sender, EventArgs e)
+    {
+        Napiwek.Value = 20;
+    }
+
+    public class RachunekCalculatorVeiwModel : INotifyPropertyChanged
 	{
         private double _kwota { get; set; }
         private double _napiwek { get; set; }
@@ -52,6 +67,8 @@ public partial class NewPage3 : ContentPage
                     _kwota = Math.Round(value, 2);
                     OnPropertyChanged();
                     OnPropertyChanged(nameof(Rachunek));
+                    OnPropertyChanged(nameof(NaOsobe));
+                    OnPropertyChanged(nameof(Suma));
                 }
             }
         }
@@ -66,6 +83,7 @@ public partial class NewPage3 : ContentPage
                     _napiwek = Math.Round(value,2);
                     OnPropertyChanged();
                     OnPropertyChanged(nameof(Rachunek));
+                    OnPropertyChanged(nameof(Suma));
                 }
             }
         }
@@ -89,7 +107,7 @@ public partial class NewPage3 : ContentPage
             get
             {
                 if (_kwota <= 0) return 0;
-                return Math.Round(_kwota*_napiwek/100,2);
+                return Math.Round(_kwota*(_napiwek/100),2);
             }
         }
 
@@ -98,7 +116,7 @@ public partial class NewPage3 : ContentPage
             get
             {
                 if (_kwota <= 0) return 0;
-                return _kwota + Rachunek;
+                return Math.Round(_kwota+Rachunek,2);
             }
         }
 
