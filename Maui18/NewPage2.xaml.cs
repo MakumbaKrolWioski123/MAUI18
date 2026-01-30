@@ -24,10 +24,20 @@ public partial class NewPage2 : ContentPage
 		" Powiadomienia email: "+email+
 		" Powiadomienia SMS: "+sms+
 		" Tryb ciemny: "+tryb+
-		" Rozmiar czcionki: "+czcionka+
+		" Rozmiar czcionki: "+Math.Round(czcionka)+
 		" Dane analityczne: "+dane+
 		" Personalizowane reklamy: "+reklamy
 		,"OK");
 		
 	}
-} 
+}
+
+/*
+ * nazwa funkcji:Podsumowanie
+ * opis: Wyswietla w oknie alert wszystkie ustawienia ktore zaznaczyl uzytkonwik
+ * parametry:object sender, EventArgs e
+ * zwracany typ: nic
+ * autor:Szymon W
+ 
+ 
+ */
