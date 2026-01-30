@@ -137,3 +137,32 @@ public partial class NewPage3 : ContentPage
         }
     }
 }
+
+/*
+ * nazwa funkcji:LiczbaOsob
+ * opis:zmienia widocznosc pól OsobyEntry i NaOsobeLabel na wartosc true
+ * parametry:object sender, EventArgs e
+ * zwracany typ: nic
+ * autor:Szymon W
+ 
+
+ * nazwa funkcji:Przycisk10
+ * opis:zmienia wartosc slidera od napiwku na 10
+ * parametry:object sender, EventArgs e
+ * zwracany typ: nic
+ * autor:Szymon W
+ * 
+ * 
+ * nazwa funkcji:Przycisk15
+ * opis:zmienia wartosc slidera od napiwku na 15
+ * parametry:object sender, EventArgs e
+ * zwracany typ: nic
+ * autor:Szymon W
+ * 
+ * 
+ *  nazwa funkcji:Przycisk20
+ * opis:zmienia wartosc slidera od napiwku na 20
+ * parametry:object sender, EventArgs e
+ * zwracany typ: nic
+ * autor:Szymon W
+ */
