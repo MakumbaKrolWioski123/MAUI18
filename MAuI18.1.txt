@@ -1,0 +1,7 @@
+1.Gdy piszemy w polu które ma Keyboard="Email" nie musimy zmieniac klawiatury na znaki specjalne/cyfry aby znaleźć n.p . lub @ . Hasło nie ma klawiatury własnej ponieważ mogą w nim być dowolne znaki.
+2.Pojawia się przycisk podczas edytowania aby wyczyścić wpisane w pole dane gdy to pole nie jest puste.
+3.Completed się wywoluje gdy n.p pod koniec wpisywania w pole entry danych klikniemy na klawiaturze Enter zatwierdzając wprowadzone dane, a clicked wywouluje się gdy wciśniemy n.p na Button.
+4.Editor słuzy do tekstów wielowierszowych i można w nim uzywac akapitów, a
+Entry słuzy do danych jednowierszowych takich jak Imie,Nazwisko,itd.
+5.Aby przy starcie programu nie można było go kliknąć bez wprowadzenia zadnych danych.
+6.Zamiast jednolitego tekstu, użytkownik zobaczy tekst sformatowany fragmentami. Każdy fragment (reprezentowany przez obiekt Span) może mieć inne cechy wizualne. Użytkownik zobaczy jeden spójny blok tekstu, w którym poszczególne słowa lub litery różnią się od siebie n.p pogrubieniem, kolorystyką,rozmiarem czcionki.
